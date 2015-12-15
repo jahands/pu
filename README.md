@@ -13,7 +13,7 @@ This won't solve the problems for you, just make it a bit more straightforward.
 
 `euler -new 1`
 
-([Examples](/example/p0))
+([Examples](/example/p0): [p0.go](/example/p0/p0.go), [p0_test.go](/example/p0/p0_test.go))
 
 ### Test all problems:
 
