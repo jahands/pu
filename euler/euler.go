@@ -12,9 +12,10 @@ import (
 )
 
 func main() {
-	problemID := *flag.Int("new", 1, "new <problem ID>")
+	problemIDFlag := flag.Int("new", 1, "new <problem ID>")
 	flag.Parse()
-
+	problemID := *problemIDFlag
+	println("ProblemID: " + strconv.Itoa(problemID))
 	folder := "p" + strconv.Itoa(problemID)
 	os.Mkdir(folder, 0771)
 
@@ -48,15 +49,24 @@ func getProblemDescription(problemID int) string {
 	})
 	info += "\n\n"
 	doc.Find(".info").Each(func(i int, s *goquery.Selection) {
-		// class, _ := s.Attr("class")
-		// fmt.Println(class, s.Text())
 		info += "Info:\n" + s.Text()
 	})
 	info += "\n\n"
 	doc.Find(".problem_content").Each(func(i int, s *goquery.Selection) {
-		// class, _ := s.Attr("class")
-		// fmt.Println(class, s.Text())
-		info += "Description:" + s.Text()
+		info += "Description:\n" + s.Text() + "{{end_block}}"
 	})
+
+	yuckyStrings := map[string]string{
+		"\n\n\n":           "\n\n",
+		"\n{{end_block}}":  "",
+		"Description:\n\n": "Description:\n",
+		"Title:\n":         "Title: ",
+		"You are currently using a secure connectionInfo:\n": ""}
+
+	for k, v := range yuckyStrings {
+		for i := 0; i < 5; i++ { // Make sure all get replaced.
+			info = strings.Replace(info, k, v, -1)
+		}
+	}
 	return info
 }
