@@ -1,7 +1,9 @@
 # pu
 Project euler helper. Standardize the process of solving PU problems in Go!
 
-This won't solve the problems for you, just make it a bit more straightforward.
+## Why?
+
+Project euler contains over 500 problems, so having a standard and quick way of starting a new one is helpful.
 
 ## Getting started:
 
@@ -9,7 +11,7 @@ This won't solve the problems for you, just make it a bit more straightforward.
 
 `go get -u -v github.com/jacobhands/pu/euler`
 
-### Create a folder 'p1' containing 'p1.go' and 'p1_test.go' with starting templates in current directory:
+#### Create a folder 'p1' containing 'p1.go' and 'p1_test.go' with starting templates in current directory:
 
 `euler -new 1`
 
