@@ -1,7 +1,7 @@
 # pu
 Project euler helper. Standardize the process of solving PU problems in Go!
 
-## Why?
+### Why?
 
 Project euler contains over 500 problems, so having a standard and quick way of starting a new one is helpful.
 
