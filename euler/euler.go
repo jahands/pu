@@ -17,12 +17,15 @@ func main() {
 	problemID := *problemIDFlag
 	println("ProblemID: " + strconv.Itoa(problemID))
 	folder := "p" + strconv.Itoa(problemID)
-	os.Mkdir(folder, 0771)
+	err := os.Mkdir(folder, 0771)
+	if err != nil {
+		log.Fatal("Folder " + folder + " already exists! Remove it to generate problem template.")
 
+	}
 	data := strings.Replace(problemTemplate, problemIDString, strconv.Itoa(problemID), -1)
 	data = strings.Replace(data, problemDescriptionString, getProblemDescription(problemID), -1)
 	file := "p" + strconv.Itoa(problemID) + ".go"
-	err := ioutil.WriteFile(folder+"/"+file, []byte(data), 0664)
+	err = ioutil.WriteFile(folder+"/"+file, []byte(data), 0664)
 	panicIfError(err)
 
 	data = strings.Replace(problemTestTemplate, problemIDString, strconv.Itoa(problemID), -1)
