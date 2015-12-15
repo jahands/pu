@@ -41,7 +41,7 @@ func getProblemDescription(problemID int) string {
 	if err != nil {
 		log.Fatal(err)
 	}
-	info := ""
+	info := "Problem: " + strconv.Itoa(problemID) + "\n"
 	doc.Find("h2").Each(func(i int, s *goquery.Selection) {
 		// class, _ := s.Attr("id")
 		// fmt.Println(class, s.Text())
@@ -62,7 +62,7 @@ func getProblemDescription(problemID int) string {
 		"Description:\n\n": "Description:\n",
 		"Title:\n":         "Title: ",
 		"You are currently using a secure connectionInfo:\n": "",
-		"Problem " + strconv.Itoa(problemID):                 "Problem: " + strconv.Itoa(problemID) + "; "}
+		"Problem " + strconv.Itoa(problemID):                 ""}
 
 	for k, v := range yuckyStrings {
 		for i := 0; i < 5; i++ { // Make sure all get replaced.
