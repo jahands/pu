@@ -1,22 +1,22 @@
 # pu
-Project euler helper lib
+Project euler helper. Standardize the process of solving PU problems in Go!
 
-This is not designed to help solve [Project Euler](https://projecteuler.net) problems. It's more to help standardize the prosess of solving and testing them.
+This won't solve the problems for you, just make it a bit more straightforward.
 
 ## Getting started:
 
-Install the tool:
+### Install the tool:
 
 `go get -u -v github.com/jacobhands/pu/euler`
 
-Create a folder 'p1' containing 'p1.go' and 'p1_test.go' with starting templates in current directory:
+### Create a folder 'p1' containing 'p1.go' and 'p1_test.go' with starting templates in current directory:
 
 `euler -new 1`
 
-Test all problems:
+### Test all problems:
 
 `go test ./...`
 
-// Test and benchmark all problems
+### Test and benchmark all problems
 
 `go test -bench=. ./...`
