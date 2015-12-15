@@ -20,6 +20,7 @@ func main() {
 	problem.Answer()
 }
 
+// This should return the answer in the same formatting as 'answer' is set to above.
 func solve() string {
 	return ""
 }
