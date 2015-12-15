@@ -5,10 +5,18 @@ This is not designed to help solve [Project Euler](https://projecteuler.net) pro
 
 ## Getting started:
 
+Install the tool:
+
 `go get -u -v github.com/jacobhands/pu/euler`
 
-`euler -new 1 // Creates a folder 'p1' containing 'p1.go' and 'p1_test.go' with starting templates in current directory`
+Create a folder 'p1' containing 'p1.go' and 'p1_test.go' with starting templates in current directory:
 
-`go test ./... // Test all problems`
+`euler -new 1`
 
-`go test -bench=. ./... // Test and benchmark all problems`
+Test all problems:
+
+`go test ./...`
+
+// Test and benchmark all problems
+
+`go test -bench=. ./...`
