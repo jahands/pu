@@ -48,7 +48,7 @@ func getProblemDescription(problemID int) string {
 	doc.Find("h2").Each(func(i int, s *goquery.Selection) {
 		// class, _ := s.Attr("id")
 		// fmt.Println(class, s.Text())
-		info += "Title:\n" + s.Text()
+		info += "{{Title:}}\n" + s.Text()
 	})
 	info += "\n\n"
 	doc.Find(".info").Each(func(i int, s *goquery.Selection) {
@@ -56,14 +56,14 @@ func getProblemDescription(problemID int) string {
 	})
 	info += "\n\n"
 	doc.Find(".problem_content").Each(func(i int, s *goquery.Selection) {
-		info += "Description:\n" + s.Text() + "{{end_block}}"
+		info += "{{Description:}}\n" + s.Text() + "{{end_block}}"
 	})
 
 	yuckyStrings := map[string]string{
-		"\n\n\n":           "\n\n",
-		"\n{{end_block}}":  "",
-		"Description:\n\n": "Description:\n",
-		"Title:\n":         "Title: ",
+		"\n\n\n":                                               "\n\n",
+		"\n{{end_block}}":                                      "",
+		"{{Description:}}\n\n":                                 "Description:\n",
+		"{{Title:}}\n":                                         "Title: ",
 		"You are currently using a secure connectionInfo:\n":   "",
 		"Problem " + strconv.Itoa(problemID) + "Published on ": "Published on "}
 
