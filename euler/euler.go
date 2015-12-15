@@ -24,6 +24,7 @@ func main() {
 	}
 	data := strings.Replace(problemTemplate, problemIDString, strconv.Itoa(problemID), -1)
 	data = strings.Replace(data, problemDescriptionString, getProblemDescription(problemID), -1)
+	data = strings.Replace(problemTestTemplate, problemIDString, strconv.Itoa(problemID), -1)
 	file := "p" + strconv.Itoa(problemID) + ".go"
 	err = ioutil.WriteFile(folder+"/"+file, []byte(data), 0664)
 	panicIfError(err)

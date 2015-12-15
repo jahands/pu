@@ -18,7 +18,7 @@ func main() {
 }
 
 // This should return the answer in the same formatting as 'answer' is set to above.
-func solve() string {
+func solveProblem{{problem_id}}() string {
 	return ""
 }
 `
