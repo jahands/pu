@@ -2,8 +2,7 @@ package main
 
 var (
 	problemTemplate = `/*
-
- */
+{{problem_description}}*/
 package main
 
 import "github.com/jacobhands/pu"
