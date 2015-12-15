@@ -61,7 +61,8 @@ func getProblemDescription(problemID int) string {
 		"\n{{end_block}}":  "",
 		"Description:\n\n": "Description:\n",
 		"Title:\n":         "Title: ",
-		"You are currently using a secure connectionInfo:\n": ""}
+		"You are currently using a secure connectionInfo:\n": "",
+		"Problem " + strconv.Itoa(problemID):                 "Problem: " + strconv.Itoa(problemID) + "; "}
 
 	for k, v := range yuckyStrings {
 		for i := 0; i < 5; i++ { // Make sure all get replaced.
