@@ -44,7 +44,7 @@ func getProblemDescription(problemID int) string {
 	if err != nil {
 		log.Fatal(err)
 	}
-	info := "Project Euler - Problem: " + strconv.Itoa(problemID) + "\n\n"
+	info := "Project Euler: Problem " + strconv.Itoa(problemID) + "\n\n"
 	doc.Find("h2").Each(func(i int, s *goquery.Selection) {
 		// class, _ := s.Attr("id")
 		// fmt.Println(class, s.Text())
