@@ -3,14 +3,17 @@ package main
 var (
 	problemTemplate = `/*
 
-*/
+ */
 package main
 
 import "github.com/jacobhands/pu"
 
 var (
-	answer    = "NA" // Change to correct answer once solved.
-	problem   = pu.Problem{{{problem_id}}, solve, answer}
+	answer  = "NA" // Change to correct answer once solved.
+	problem = pu.Problem{
+		ID:            1,
+		Solver:        solve,
+		CorrectAnswer: answer}
 )
 
 func main() {
