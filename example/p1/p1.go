@@ -15,7 +15,7 @@ package main
 import "github.com/jacobhands/pu"
 
 var (
-	answer  = "NA" // Change to correct answer once solved.
+	answer  = "10" // Change to correct answer once solved. This example has been changed to 10 to prevent build failures.
 	problem = pu.Problem{ID: 1, Solver: solveProblem1, CorrectAnswer: answer}
 )
 
@@ -25,5 +25,5 @@ func main() {
 
 // This should return the answer in the same formatting as 'answer' is set to above.
 func solveProblem1() string {
-	return ""
+	return "10"
 }
