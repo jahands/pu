@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jacobhands/pu.svg)](https://travis-ci.org/jacobhands/pu)
+
 # pu
 `pu` is a library with a little boilerplate to help with the repetitive creation of new Project Euler projects.
 
