@@ -22,7 +22,7 @@ Knowing which problems are solved is as easy as `go test ./...` because the temp
 
 `euler -new 1`
 
-([Examples](/example/p0): [p0.go](/example/p0/p0.go), [p0_test.go](/example/p0/p0_test.go))
+([Examples](/example/p1): [p1.go](/example/p1/p1.go), [p1_test.go](/example/p1/p1_test.go))
 
 ### Test all problems:
 
