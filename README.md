@@ -1,4 +1,6 @@
 # pu
+
+[![Join the chat at https://gitter.im/jacobhands/pu](https://badges.gitter.im/jacobhands/pu.svg)](https://gitter.im/jacobhands/pu?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 `pu` is a library with a little boilerplate to help with the repetitive creation of new Project Euler projects.
 
 `euler` is a command-line tool to grab the problem from the website and generate a template for each problem as you go.
