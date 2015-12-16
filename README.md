@@ -31,3 +31,7 @@ Knowing which problems are solved is as easy as `go test ./...` because the temp
 ### Test and benchmark all problems
 
 `go test -bench=. ./...`
+
+## Contributing
+
+Contributions are welcome. Please read [CONTRIBUTING.md](/CONTRIBUTING.md) before submitting PR's.
