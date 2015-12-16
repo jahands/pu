@@ -1,9 +1,16 @@
 # pu
-Project euler helper. Standardize the process of solving PU problems in Go!
+`pu` is a library with a little boilerplate to help with the repetitive creation of new Project Euler projects.
+
+`euler` is a command-line tool to grab the problem from the website and generate a template for each problem as you go.
 
 ### Why?
 
-Project euler contains over 500 problems, so having a standard and quick way of starting a new one is helpful.
+Project euler contains over 500 problems, so having a standard and quick way of starting a new problems is helpful.
+
+One simple command: `euler -new 1` and you're ready to do problem 1 with this:
+![[template](https://i.imgur.com/QK3Mk8d.png)](https://i.imgur.com/QK3Mk8dl.png)
+
+Knowing which problems are solved is as easy as `go test ./...` because the template includes a test to see if the problem is solved.
 
 ## Getting started:
 
