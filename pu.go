@@ -3,8 +3,8 @@ package pu
 
 import (
 	"fmt"
-	"strconv"
 	"testing"
+	"time"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -19,6 +19,8 @@ type Problem struct {
 	CorrectAnswer string
 	// Attempts is the count of submissions to projecteuler.net it took to submit the correct answer.
 	Attempts int
+	// DateSolved is the date the problem was solved.
+	DateSolved string
 }
 
 // Bench benchmarks the problem. Great for testing for improvements.
@@ -33,7 +35,14 @@ func (p Problem) Answer() {
 	if p.CorrectAnswer == "NA" {
 		fmt.Println("Problem", p.ID, "has not been solved yet.")
 	} else {
-		fmt.Println("Answer to problem", p.ID, "is", p.Solver(), "("+strconv.Itoa(p.Attempts), "attempts)")
+		t1 := time.Now()
+		answer := p.Solver()
+		t2 := time.Now()
+		fmt.Println("Problem:", p.ID)
+		fmt.Println("Answer:", answer)
+		fmt.Println("Execution Time:", t2.Sub(t1))
+		fmt.Println("Attempts:", p.Attempts)
+		fmt.Println("Date Solved", p.DateSolved)
 	}
 }
 
