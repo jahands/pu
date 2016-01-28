@@ -3,6 +3,7 @@ package pu
 
 import (
 	"fmt"
+	"strconv"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -32,7 +33,7 @@ func (p Problem) Answer() {
 	if p.CorrectAnswer == "NA" {
 		fmt.Println("Problem", p.ID, "has not been solved yet.")
 	} else {
-		fmt.Println("Answer to problem", p.ID, "is", p.Solver(), "(", p.Attempts, "attempts)")
+		fmt.Println("Answer to problem", p.ID, "is", p.Solver(), "("+strconv.Itoa(p.Attempts), "attempts)")
 	}
 }
 
