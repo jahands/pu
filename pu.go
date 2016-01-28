@@ -34,16 +34,15 @@ func (p Problem) Bench(b *testing.B) {
 func (p Problem) Answer() {
 	if p.CorrectAnswer == "NA" {
 		fmt.Println("Problem", p.ID, "has not been solved yet.")
-	} else {
-		t1 := time.Now()
-		answer := p.Solver()
-		t2 := time.Now()
-		fmt.Println("Problem:", p.ID)
-		fmt.Println("Answer:", answer)
-		fmt.Println("Execution Time:", t2.Sub(t1))
-		fmt.Println("Date Solved:", p.DateSolved)
-		fmt.Println("Attempts:", p.Attempts)
 	}
+	t1 := time.Now()
+	answer := p.Solver()
+	t2 := time.Now()
+	fmt.Println("Problem:", p.ID)
+	fmt.Println("Answer:", answer)
+	fmt.Println("Execution Time:", t2.Sub(t1))
+	fmt.Println("Date Solved:", p.DateSolved)
+	fmt.Println("Attempts:", p.Attempts)
 }
 
 // Test ensures the answer is correct. Will fail until problem is solved.
