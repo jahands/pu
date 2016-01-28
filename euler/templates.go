@@ -9,8 +9,9 @@ package main
 import "github.com/jacobhands/pu"
 
 var (
-	answer  = "NA" // Change to correct answer once solved.
-	problem = pu.Problem{ID: {{problem_id}}, Solver: solveProblem{{problem_id}}, CorrectAnswer: answer}
+	answer  = "NA"	// Change to correct answer once solved.
+	attempts = 1	// Number of times answer was submitted to projecteuler.net before getting it correct.
+	problem = pu.Problem{ID: {{problem_id}}, Solver: solveProblem{{problem_id}}, CorrectAnswer: answer, Attempts: attempts}
 )
 
 func main() {
