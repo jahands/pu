@@ -11,5 +11,7 @@ matrix:
     - go: tip
 
 script:
+- (if [ "$(goimports -d .)" == "" ]; then echo "Good format"; else echo "Bad format"; exit 33; fi);
+- (if [ "$(goimports -d .)" == "" ]; then echo "Good format"; else echo "Bad format"; exit 33; fi);
 - go vet ./...
 - go test -v ./...

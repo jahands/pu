@@ -10,7 +10,7 @@ import "github.com/jacobhands/pu"
 
 var (
 	answer  = "NA" // Change to correct answer once solved.
-	problem = pu.Problem{ID: 1, Solver: solveProblem{{problem_id}}, CorrectAnswer: answer}
+	problem = pu.Problem{ID: {{problem_id}}, Solver: solveProblem{{problem_id}}, CorrectAnswer: answer}
 )
 
 func main() {
