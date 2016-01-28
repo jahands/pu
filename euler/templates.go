@@ -10,7 +10,7 @@ import "github.com/jacobhands/pu"
 
 var (
 	answer  = "NA"	// Change to correct answer once solved.
-	attempts = 1	// Number of times answer was submitted to projecteuler.net before getting it correct.
+	attempts = 1	// Number of times answer was submitted to projecteuler.net to get it correct.
 	problem = pu.Problem{ID: {{problem_id}}, Solver: solveProblem{{problem_id}}, CorrectAnswer: answer, Attempts: attempts}
 )
 
