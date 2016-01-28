@@ -9,10 +9,10 @@ package main
 import "github.com/jacobhands/pu"
 
 var (
-	answer  = "NA"	// Change to correct answer once solved.
-	attempts = 1	// Number of times answer was submitted to projecteuler.net to get it correct.
+	answer     = "NA"	// Change to correct answer once solved.
+	attempts   = 1	// Number of times answer was submitted to projecteuler.net to get it correct.
 	dateSolved = "" // Date the problem was solved. (YYYY-MM-DD)
-	problem = pu.Problem{ID: {{problem_id}}, Solver: solveProblem{{problem_id}}, CorrectAnswer: answer, Attempts: attempts, DateSolved: dateSolved}
+	problem    = pu.Problem{ID: {{problem_id}}, Solver: solveProblem{{problem_id}}, CorrectAnswer: answer, Attempts: attempts, DateSolved: dateSolved}
 )
 
 func main() {
