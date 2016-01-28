@@ -33,7 +33,7 @@ func (p Problem) Bench(b *testing.B) {
 // Answer prints out the answer for viewing.
 func (p Problem) Answer() {
 	if p.CorrectAnswer == "NA" {
-		fmt.Println("Problem", p.ID, "has not been solved yet.")
+		fmt.Println("Problem has not been solved yet.")
 	}
 	t1 := time.Now()
 	answer := p.Solver()

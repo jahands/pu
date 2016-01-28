@@ -7,6 +7,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"time"
 
 	"github.com/PuerkitoBio/goquery"
 )
@@ -25,6 +26,7 @@ func main() {
 	data := strings.Replace(problemTemplate, problemIDString, strconv.Itoa(problemID), -1)
 	data = strings.Replace(data, problemDescriptionString, getProblemDescription(problemID), -1)
 	data = strings.Replace(data, problemIDString, strconv.Itoa(problemID), -1)
+	data = strings.Replace(data, problemDateSolvedString, time.Now().Format("2006-01-"), -1)
 	file := "p" + strconv.Itoa(problemID) + ".go"
 	err = ioutil.WriteFile(folder+"/"+file, []byte(data), 0664)
 	panicIfError(err)
