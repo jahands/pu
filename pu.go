@@ -32,7 +32,7 @@ func (p Problem) Answer() {
 	if p.CorrectAnswer == "NA" {
 		fmt.Println("Problem", p.ID, "has not been solved yet.")
 	} else {
-		fmt.Println("Answer to problem", p.ID, "is", p.Solver())
+		fmt.Println("Answer to problem", p.ID, "is", p.Solver(), "(took", p.Attempts, "attempts)")
 	}
 }
 
